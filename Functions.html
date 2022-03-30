@@ -66,6 +66,13 @@
 	text-align: left;
 	font-size: x-large;
 }
+.auto-style31 {
+	font-family: "Courier New", Courier, monospace;
+	text-align: left;
+}
+.auto-style32 {
+	font-size: x-large;
+}
 </style>
 
 </head>
@@ -255,6 +262,154 @@
 		<span lang="en-in">When the function is called, it prints the value 
 		assigned to name twice as output.</span></p>
 		<p class="auto-style29">
+		The same composition rules apply to programmer-defined functions as they 
+		do to built-in functions.</p>
+		<p class="auto-style29">
+		
+		
+		<iframe src="https://trinket.io/embed/python3/b146d6647b?start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+		&nbsp;<span lang="en-in">Here the </span>argument is evaluated before 
+		the function is called<span lang="en-in"> as seen from above execution.</span></p>
+		<p class="auto-style30">
+		
+		<strong>Variables and parameters are local</strong></p>
+		<p class="auto-style29">
+		
+		When you create a variable inside a function, it is local, meaning it 
+		lives only within the function.</p>
+		<p class="auto-style29">
+		
+		
+		<iframe src="https://trinket.io/embed/python3/17fc5b537e?start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+		&nbsp;The variable cat is destroyed when function printing twice 
+		finishes execution. When we try to print it, we receive the following 
+		error:</p>
+		<p class="auto-style31">
+		
+		NameError: name 'cat' is not defined</p>
+		<p class="auto-style30">
+		
+		<strong>Stack diagrams</strong></p>
+		<p class="auto-style29">
+		
+		A <strong>stack diagram </strong>might be handy for keeping track of 
+		which variables can be used where. Stack diagrams, like state diagrams, 
+		indicate the <em>value of each variable</em> as well as <em>the function 
+		to which each variable belongs</em>.</p>
+		<p class="auto-style29">
+		
+		A <strong>frame</strong> is used to represent each function. A frame is 
+		a box that contains the arguments and variables of a function as well as 
+		the name of the function.</p>
+		<p class="auto-style29">
+		
+		The frames are stacked to show which function called which function, and 
+		so on. <span lang="en-in">In our example, the function
+		<span class="auto-style27">'p</span></span><span class="auto-style27">rint<span lang="en-in">_</span>twice<span lang="en-in">'</span></span> 
+		was called by <span lang="en-in">the function <span class="auto-style27">
+		'</span></span><span class="auto-style27">printing<span lang="en-in">_</span>twice</span><span lang="en-in">'</span>, 
+		which was called by <span class="auto-style27">__main__<span lang="en-in">.</span></span></p>
+		<p class="auto-style29">
+		
+		<span lang="en-in"><span class="auto-style27">__main__ </span>is a</span> 
+		special name for the topmost frame in this case. <span lang="en-in">Upon 
+		creating a variable outside a functon i</span>t belongs to
+		<span class="auto-style27">__main__<span lang="en-in">.</span></span></p>
+		<p class="auto-style29">
+		
+		&nbsp;A <strong>traceback</strong> is a collection of functions. It 
+		shows you the software file the error occurred in, as well as which line 
+		and functions were active at the moment. </p>
+		<p class="auto-style28">
+		
+		<img alt="Traceback" src="images/New%20Project_new.png" style="width: 596px; height: 403px" /></p>
+		<p class="auto-style29">
+		
+		It also displays the error-causing line of code.<span lang="en-in">
+		</span>The order of the functions in the traceback corresponds to the 
+		stack diagram's frame order.&nbsp;</p>
+		<p class="auto-style29">
+		
+		<span lang="en-in">Our name error trace back would look like :</span></p>
+		<p class="auto-style29">
+		
+		<img alt="Traceback" src="images/Screenshot%202022-03-30%20171528.png" style="width: 1027px; height: 143px" /></p>
+		<p class="auto-style30">
+		
+		<strong>Fruitful functions and void functions</strong></p>
+		<p class="auto-style29">
+		
+		Fruitful functions are functions that return outcomes in the form of 
+		math functions. While void functions are functions that perform an 
+		action but do not return a value, such as print twice. </p>
+		<p class="auto-style29">
+		
+		
+		<iframe src="https://trinket.io/embed/python3/3c4064a8cc?start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+		&nbsp;</p>
+		<p class="auto-style29">
+		
+		You nearly always want to do something with the result when you call a 
+		productive function. </p>
+		<p class="auto-style29">
+		
+		If you call a productive function by itself in a script, the return 
+		value is lost permanently. </p>
+		<p class="auto-style29">
+		
+		This script computes the square root of 5, however it isn't particularly 
+		useful because it doesn't store or display the result.</p>
+		<p class="auto-style28">
+		
+		<img alt="Sqrt" src="images/Screenshot%202022-03-30%20172530.png" style="width: 197px; height: 62px" /></p>
+		<p class="auto-style29">
+		
+		There is <strong>no return value</strong> for <strong>void functions</strong>, 
+		therefore they may display something on the screen or have some other 
+		effect. You obtain a special value called None if you assign the result 
+		to a variable.</p>
+		<p class="auto-style29">
+		
+		The value None is not the same as the string 'None'. It is a special 
+		value that has its own type:</p>
+		<p class="auto-style28">
+		
+		<img alt="None" src="images/Screenshot%202022-03-30%20172905.png" style="width: 202px; height: 38px" /></p>
+		<p class="auto-style29">
+		
+		<span class="auto-style32" lang="en-in"><strong>Why use Functions ?</strong></span></p>
+		<p class="auto-style29">
+		
+		<span lang="en-in">Use Case of functions are essential as it allows to 
+		break a larger complex program imto smaller and more easily manageable 
+		parts.</span></p>
+		<p class="auto-style29">
+		
+		<span lang="en-in">Some of the advantages are listed below :</span></p>
+		<ul>
+			<li>
+			<p class="auto-style29">When you create a new function, you can name 
+			a group of statements, making your software easier to read and 
+			debug.</p>
+			</li>
+			<li>
+			<p class="auto-style29">Functions can reduce the size of a program 
+			by removing redundant code. If you need to make a modification 
+			later, you just have to do it once.</p>
+			</li>
+			<li>
+			<p class="auto-style29">Breaking down a large program into functions 
+			allows you to debug each component individually before putting them 
+			together into a workable whole.</p>
+			</li>
+			<li>
+			<p class="auto-style29">Many programs benefit from well-designed 
+			functionalities. You can reuse one once you've written and debugged 
+			it.</p>
+			</li>
+		</ul>
+		<p class="auto-style29">
+		
 		&nbsp;</p>
 
 	<!-- end of content column: put your content above this line -->
@@ -274,7 +429,7 @@
 		Variables</a></span></p>
 		<p class="auto-style6"><span lang="en-in"><a href="Functions.html">
 		Functions</a></span></p>
-		<p class="auto-style6"><span lang="en-in"><a href="Terms.html">Terms</a></span></p>
+		<p class="auto-style6"><span lang="en-in"><a href="Terms_1.html">Terms</a></span></p>
 
 	<!-- end of side column: put your navigation menu, etc, above this line -->
 	</div>
